@@ -24,7 +24,7 @@ file_name = open('secrets.txt', 'w+')
 
 #7. Write your own secrets to the file with the write() function
 file_name = open('secrets.txt', 'w+')
-file_name.write('I do uber')
+file_name.write('I do uber ')
 
 #8. Close the secrets.txt file using the close() method. DON'T FORGET!
 file_name.close()
@@ -32,11 +32,15 @@ file_name.close()
 file_name = open('secrets.txt', 'r')
 print(file_name.read())
 #10. Open your secrets.txt file in append mode and write some more super secret info
-
+file_name = open('secrets.txt', 'a+')
+file_name.write('I also ride motorcycles')
+file_name = open('secrets.txt', 'r')
+print(file_name.read())
 #11. Close the secrets.txt file again using the close() function
-
+file_name.close()
 #12. Rename the secrets.txt and make it a "hidden" file named .supersecret.txt using the os.rename() function
-
+import os
+os.rename('secrets.txt', '.supersecret.txt')
 #13. See if you can see the file in your file explorer
 
 #14. Create a list variable named file_names that contains a list of filenames
